@@ -2,10 +2,10 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-data = pd.read_csv("C:/Users/patba/Downloads/practicum resources/notebooks/wr_data.csv", header=1)
+data = pd.read_csv("wr_data.csv", header=1)
 renamed_columns = {'AY.1': 'AY%', 'TAR.1':'TAR%', 'YDS.1':'YAC', 'AVG':'YAC_AVG'}
 data = data.rename(columns=renamed_columns)
-f_points = pd.read_csv('C:/Users/patba/Downloads/practicum resources/notebooks/wr_fantasy_points.csv')
+f_points = pd.read_csv('wr_fantasy_points.csv')
 app_data = pd.merge(data, f_points)
 app_data
 
