@@ -7,6 +7,7 @@ renamed_columns = {'AY.1': 'AY%', 'TAR.1':'TAR%', 'YDS.1':'YAC', 'AVG':'YAC_AVG'
 data = data.rename(columns=renamed_columns)
 f_points = pd.read_csv('wr_fantasy_points.csv')
 app_data = pd.merge(data, f_points)
+app_data = app_data.drop(['Name', 'pos'], axis=1)
 app_data
 
 
